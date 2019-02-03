@@ -16,21 +16,27 @@ modalButtonNo.addEventListener('click', () => {
 });
 
 toggleButton.addEventListener('click', () => {
-  mobileNav.style.display = 'block';
-  backdrop.style.display = 'block';
+  // mobileNav.style.display = 'block';
+  // backdrop.style.display = 'block';  
+  mobileNav.classList.add('open');
+  backdrop.classList.add('open');
 });
 
 backdrop.addEventListener('click', () => {
-  mobileNav.style.display = 'none';
+  mobileNav.classList.remove('open');
   closeModal();
 });
 
 let openModal = () => {
-  backdrop.style.display = "block";
-  modal.style.display = "block";
+  // backdrop.style.display = "block";
+  // modal.style.display = "block";
+  modal.classList.add('open');
+  backdrop.classList.add('open');
 };
 
 let closeModal = () => {
-  backdrop.style.display = "none";
-  modal.style.display = "none";
+  // backdrop.style.display = "none";
+  // modal.style.display = "none";
+  modal.classList.remove('open');
+  backdrop.classList.remove('open');
 };
